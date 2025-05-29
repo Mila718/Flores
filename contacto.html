@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RAMOS</title>
+	
+	 <!-- Fuentes de Google -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Lilita+One&display=swap" rel="stylesheet">
+	
+	
+	
+	
+	
+    <style>
+        body {
+            background-color: #BF90A8;
+           font-family: 'Lilita One', cursive; /* Fuente para texto general */
+         margin: 40px;
+		 text-align:center;
+		 font-size:40;
+		 color: #C02A7A;
+        }
+        h1 {
+            color: #C02A7A;
+        }
+		
+		h2{
+			color: #96215F;
+		}
+        p {
+            color: #555;
+        }
+		
+	.rectangulo {
+            background-color: #FCEBF3;
+            border: 2px solid #B55F91;
+            padding: 20px;
+           margin: 20px auto;
+          max-width: 500px;
+           border-radius: 12px;
+          font-size: 20px;
+          text-align: center;
+          
+        }
+		
+		.campo {
+         width: 50%;
+         max-width: 300px;
+         padding: 10px;
+          border: 1px solid #B55F91;
+          border-radius: 5px;
+         font-size: 10px;
+           margin-top: 5px;
+        }
+
+       .boton-enviar {
+          background-color: #855A71;
+         color: pink;
+           border: none;
+           padding: 12px 20px;
+          font-size: 16px;
+            border-radius: 8px;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+
+        .boton-enviar:hover {
+         background-color: #B55F91;
+        }
+		
+		
+		.icono-red {
+          width: 40px;
+          height: 40px;
+         margin: 10px;
+          vertical-align: middle;
+        }
+		
+		   .boton-inicio {
+            position: fixed;
+            top: 20px;
+           left: 20px; /* Cámbialo a "right" si lo quieres del otro lado */
+          background-color: #D17BA8;
+          color: white;
+         padding: 8px 14px;
+           border-radius: 8px;
+           text-decoration: none;
+          font-size: 14px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+          z-index: 1000;
+        }
+
+      .boton-inicio:hover {
+           background-color: #B55F91;
+        }
+		
+		
+		
+
+		
+		
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <div class ="rectangulo">
+	ARMA TU ARREGLO</div>
+	
+	<h2>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES PARA QUE NO TE PIERDAS LOS NUEVOS ARREGLOS QUE TENEMOS <b>PARA TI</b></h2>
+	
+	
+	
+	<form>
+  <label for="nombre">Nombre completo:</label><br>
+  <input type="text" id="nombre" name="nombre" class="campo"><br><br>
+
+  <label for="correo">Correo electrónico:</label><br>
+  <input type="email" id="correo" name="correo" class="campo"><br><br>
+
+  <label for="direccion">Direccion:</label><br>
+  <textarea id="Direccion" name="Direccion" class="campo" rows="4"></textarea><br><br>
+  
+  <label for="Nùmero de Telefono">Nùmero de Telefono:</label><br>
+  <textarea id="numero de telefono" name="numero de telefono" class="campo" rows="4"></textarea><br><br>
+  
+ <label for="no. tarjeta de credito">No. Tarjeta de Crèdito:</label><br>
+  <textarea id="no. tarjeta de credito" name="no. tarjeta de credito" class="campo" rows="4"></textarea><br><br>
+  
+   <label for="describenos tu arreglo a elegir">Describenos tu Arreglo a Elegir:</label><br>
+  <textarea id="describenos tu arreglo a elegir" name="describenos tu arreglo a elegir" class="campo" rows="4"></textarea><br><br>
+  
+  
+  <input type="submit" value="Enviar" class="boton-enviar">
+</form>
+
+<a href="https://www.facebook.com/share/1GdWnhetuH/" target="_blank">
+ <img src="face.png" alt="face"
+ class="icono-red"
+ </a>
+
+	<a href="https://www.instagram.com/floreriafiorella_?igsh=MThsaHBldXBvcTJpeg==" target="_blank">
+ <img src="ig.png" alt="ig"
+ class="icono-red"
+ </a>
+ 
+ 
+ 
+ 
+
+
+<script>
+  // Obtener seleccionados desde el almacenamiento local
+  const seleccionados = JSON.parse(localStorage.getItem('productosSeleccionados')) || [];
+
+  const listaDiv = document.getElementById('listaSeleccionados');
+  const botonVer = document.getElementById('verSeleccionados');
+
+  botonVer.addEventListener('click', () => {
+    if (seleccionados.length === 0) {
+      listaDiv.innerHTML = "<p>No has seleccionado ningún producto aún.</p>";
+    } else {
+      listaDiv.innerHTML = "<ul>" + 
+        seleccionados.map(nombre => <li>${nombre}</li>).join('') +
+        "</ul>";
+    }
+  });
+</script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+	
+	
+	<a href="FLOR.HTML" class="boton-inicio">Inicio</a>
+</body>
+</html>
